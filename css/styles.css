@@ -1,3 +1,32 @@
+@font-face {
+  font-family: "Open Sans";
+  src: url('fonts/opensans/OpenSans.ttf') format('truetype');
+  font-weight: 300 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url('fonts/opensans/OpenSans-Italic.ttf') format('truetype');
+  font-weight: 300 800;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: Saira;
+  src: url('fonts/saira/saira.ttf') format('truetype');
+  font-weight: 300 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Saira;
+  src: url('fonts/saira/Saira-Italic.ttf') format('truetype');
+  font-weight: 300 800;
+  font-style: italic;
+}
+
+
 html, body {
     height: 100%;
     margin: 0;
@@ -8,14 +37,38 @@ html, body {
 /* Base styles */
 body {
     margin: 0;
-    font-family: 'Segoe UI', sans-serif;
     background: #f9f9f9;
     color: #1b1b1f;
+    line-height: 1.5;
+    font-family: "Open Sans","PT Sans", Calibri, Tahoma, sans-serif;
 }
 
 main {
     flex: 1;
     padding: 0rem;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 400;
+  font-family: Saira,"PT Sans", Calibri, Tahoma, sans-serif;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 400;
+  font-family: Saira,"PT Sans", Calibri, Tahoma, sans-serif;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  font-family: Saira,"PT Sans", Calibri, Tahoma, sans-serif;
+}
+
+p {
+  font-size: 1.25rem;
+  font-weight: 400;
 }
 
 a {
@@ -45,8 +98,10 @@ a {
 }
 
 .nav-links a {
-    font-weight: 500;
+    font-weight: 450;
     color: #334155;
+    font-size: 1.15rem;
+    font-family: Saira,"PT Sans", Calibri, Tahoma, sans-serif;
 }
 
 .nav-links a:hover {
@@ -120,27 +175,16 @@ a {
 
 .hero-content h1 {
     color: rgb(14, 75, 92);
-    font-size: 3rem;
-    font-weight: 550;
     line-height: 1.2;
     margin-bottom: 20px;
 }
 
 .hero-content p {
     color: rgb(60,60,60);
-    font-size: 1.20rem;
-    font-weight: 500;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+    font-size: 1.25rem;
 }
 
-.hero-content .btn {
-    background-color: #ff4f41;
-    color: rgb(255, 255, 255);
-    padding: 12px 30px;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-}
 
 .hero-image {
     flex: 1;
@@ -158,7 +202,7 @@ a {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    padding: 4rem 2rem;
+    padding: 3rem 2rem 2rem 2rem;
     max-width: 1100px;
     margin: 0 auto;
   }
@@ -203,144 +247,198 @@ a {
     font-size: 1.25rem;
     color: #1f2937;
     margin: 0;
-    font-weight: 550;
+    font-weight: 450;
   }
 
-  /* services.html */
-  section.services-section {
-    max-width: 900px;
-    margin: 0rem auto 0rem auto;
-    padding: 2rem;
-    color: rgb(60,60,60);
-    line-height: 1.6;
+  /* home.html services header */
+  .home-header {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1rem 0 0 0;
   }
-  
-  
-  .services-section h1 {
-    font-size: 2.20rem;
-    font-weight: 550;
-    margin-bottom: 0rem;
-    padding: 0rem;
-    color: rgb(14,75,92);
+
+  .home-header h2 {
+    font-size: 1.60rem;
+    color: #ff3131;
   }
-  
-  .services-section h3 {
-    font-size: 1.25rem;
-    font-weight: 500;
-    color: rgb(255, 49, 49, 0.85);
-    margin-top: -0.5rem;
-    padding-top: 0rem;
-  }
-  
-  .services-section h2 {
-    font-size: 1.5rem;
-    font-weight: 550;
-    margin-top: 2rem;
-    margin-bottom: 0.5rem;
-    color: rgb(14, 75, 92);
-  }
-  
-  .services-section p {
-    font-size: 1rem;
-    color: rgb(60,60,60);
-    margin-bottom: 1.5rem;
-  }
-  
-  .services-section ul {
-    list-style: none;
-    padding-left: 0;
+
+  /* home.html services section */
+  .services-section {
     margin: 0;
-  }
-  
-  .services-section li {
-    position: relative;
-    padding-left: 1.5rem;
-    margin-bottom: 0.75rem;
-    color: rgb(60,60,60);
-  }
-  
-  .services-section li::before {
-    content: '•';
-    position: absolute;
-    left: 0;
-    color: rgb(14,75,92, 0.50);
-    font-weight: bold;
-    font-size: 1.2rem;
-    line-height: 1;
+    padding: 0rem;
+    display: flex;
+    justify-content: center;
   }
 
-  /* contact.html */
-  .cta-section {
-    background-color: #f9f9f9;
-    padding: 4rem 1.5rem;
-    text-align: center;
-    }
+  .accordion {
+    width: 100%;
+    max-width: 1100px;
+  }
 
-    .cta-container {
-    max-width: 720px;
-    margin: 0 auto;
-    }
-
-    .cta-container h2 {
-    font-size: 2rem;
-    font-weight: 550;
-    color: rgb(14,75,95);
+  details {
+    background: rgb(14, 75, 92, 0.05);
+    border-radius: 5px;
     margin-bottom: 1rem;
-    }
+    padding: 0.5rem 1rem;
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+                -6px -6px 10px -1px rgba(255, 255, 255, 0.70);
+    transition: all 0.3s ease;
+  }
 
-    .cta-container p {
-    font-size: 1.10rem;
-    max-width: 450px;
-    margin: 0 auto;
+  summary {
+    font-size: 1.3rem;
+    font-weight: 450;
+    color: rgb(14, 75, 92);
+    cursor: pointer;
+    outline: none;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Saira,"PT Sans", Calibri, Tahoma, sans-serif;
+
+  }
+
+  summary::marker {
+    display: none;
+  }
+
+  summary::after {
+    content: "+";
+    font-size: 1.75rem;
+    color: #ff3131;
+    transition: transform 0.3s ease;
+  }
+
+  details[open] summary::after {
+    content: "–";
+  }
+
+  details > p {
+    margin: 0.5rem 0 0 0;
+    font-size: 1.05rem;
     color: rgb(60,60,60);
-    margin-bottom: 2rem;
-    line-height: 1.6;
-    }
+  }
 
-    .cta-container h3 {
-    font-size: 1.0rem;
-    font-weight: 550;
-    margin-bottom: 0.5rem;
-    color: rgb(255,49,49);
-    }
-    
-    .connect-with-us {
+  /* home.html platforms */
+  .platforms {
+    margin: 0;
+    padding: 0rem;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.75rem;
-    }
+    justify-content: center;
+  }
 
-    .email-line {
+  .platforms img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* home.html connect with us */
+  .connect {
+    margin: 0;
+    padding: 0 0 5rem 0;
     display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-size: 1rem;
-    }
+    justify-content: center;
+  }
 
-    .social-links {
-    display: flex;
-    gap: 1.25rem;
-    }
+  .connect-div {
+    margin-top: -1.5rem;
+    max-width: 1100px;
+  }
+
+  .connect-div h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: rgb(14, 75, 92);
+    margin-bottom: -0.6rem;
+  }
+  
+  .connect-div p {
+    font-size: 1.05rem;
+    color: rgb(60,60,60);
+    padding-bottom: 1rem;
+  }
+
+  .btn {
+    background-color: rgba(14, 75, 92, 0.65);
+    box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.5);
+    color: rgb(255, 255, 255);
+    padding: 10px 30px;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 5px;
+}
+
+  
+/* contact.html */
+/* contact.html */
+.cta-section {
+  background-color: #f9f9f9;
+  padding: 4rem 1.5rem;
+  text-align: center;
+  }
 
 
-    .icon {
-    width: 20px;
-    height: 20px;
-    color: rgb(14, 75, 95);
-    }
+  .cta-container {
+  max-width: 720px;
+  margin: 0 auto;
+  }
 
-    .icon.social {
-    transition: transform 0.2s ease;
-    }
 
-    .icon.social:hover {
-    transform: scale(1.1);
-    color: #0f172a;
-    }
-    
+  .cta-container h2 {
+  font-size: 2rem;
+  font-weight: 550;
+  color: rgb(14,75,95);
+  margin-bottom: 1rem;
+  }
+
+  .cta-container h3 {
+  font-size: 1.7rem;
+  margin-bottom: 0.5rem;
+  color: rgb(255,49,49);
+  }
+ 
+  .connect-with-us {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  }
+
+
+  .email-line {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  }
+
+
+  .social-links {
+  display: flex;
+  gap: 1.25rem;
+  }
+
+
+  .icon {
+  width: 20px;
+  height: 20px;
+  color: rgb(14, 75, 95);
+  }
+
+
+  .icon.social {
+  transition: transform 0.2s ease;
+  }
+
+
+  .icon.social:hover {
+  transform: scale(1.1);
+  color: #0f172a;
+  }
 
 /* Responsive Styles */
+
 @media (min-width: 769px) and (max-width: 1096px) {
     /* Styles for viewports between 769px and 1096px */
       .hero-content h1 {
@@ -352,6 +450,12 @@ a {
           font-size: 1.10rem;
           margin-bottom: 25px;
       }
+
+      .services-section h2 {
+        font-size: 1.75rem;
+        padding-left: 1.75rem;
+      }
+
   }
   
 
@@ -410,6 +514,30 @@ a {
 
     .hero-content p {
         font-size: 1.1rem;
+    }
+
+    .services-section h2 {
+      font-size: 1.50rem;
+      padding-left: 1rem;
+    }
+    
+  }
+
+  /* Accordian Section */
+  @media (max-width: 1100px) {
+    .accordion {
+      padding: 0 1rem;
+    }
+  }
+
+  @media (max-width: 1140px) {
+    .home-header h2 {
+      font-size: 1.4rem;
+      padding-left: 30px;
+    }
+
+    .connect-div  {
+      padding-left: 30px;
     }
   }
 
